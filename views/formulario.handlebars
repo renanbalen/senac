@@ -1,0 +1,34 @@
+
+<h1>Cadastrar Usuário</h1>
+<form action="/cadastro" method="POST">
+    <input type="=text" name="nome" placeholder="informe o nome"/><br> <br>
+    <input type="password" name="senha" placeholder="informe a senha"/>
+    <br> <br>
+    <input type="submit" name="conectar">
+</form>
+<div id="botoes">
+    <a href="#"><div class="redondo">C</div></a>
+    <a href="#"><div class="redondo">R</div></a>
+    <div class="redondo">U</div>
+    <div class="redondo">D</div>
+</div> 
+
+<table class="table" >
+    <tr>
+        <th>Nome</th>
+        <th>Senha</th>
+        <th>Atualizar</th>
+        <th>excluir</th>
+    </tr>
+    {{#each doador}}
+    
+         <tr>
+             <td>{{nome}}</td>
+             <td>{{senha}}</td>
+             <td><a href="/update/{{id}}">Modificar</a></td>
+             <td><a href="/delete/{{id}}">Apagar</a></td>
+         </tr>
+    {{/each}}
+    
+</table>
+
