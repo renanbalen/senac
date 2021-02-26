@@ -1,3 +1,53 @@
 body form input {
     background-color: chartreuse !important;
 }
+
+#carousel{
+    
+    margin-top: 56px;
+    margin-left: -143px;
+   
+}
+#carousel img{
+    width: 500px;
+}
+
+#cordefundo{
+   background-color: rgb(205, 245, 245);
+}
+
+#cabecalho{
+    font-size: 20px;
+}
+table img{
+    width: 80px;
+}
+
+#fraseinicial{ 
+    font-size: 70px;
+    color: rgb(122, 120, 120);
+    text-align-last: center;
+    }
+#fraseinicial2{
+font-size: 20px;
+}
+
+#fraseinicial3{
+  font-size: 20px;
+}
+
+#fraseinicial4{
+    font-size: 15px;
+}
+
+#logoff{
+    margin-left: 670px;
+}
+
+#foto3{
+    height: 235px;
+}
+ 
+#foto3inicial{
+    height: 380px;
+}

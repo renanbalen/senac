@@ -1,0 +1,37 @@
+<br>
+<br>
+<br>
+<form action="/cadDoacao" method="POST">
+ 
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Selecione a categoria</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="categoria">
+      <option>Alimentos</option>
+      <option>Vestuário</option>
+      <option>Dinheiro</option>
+      <option>brinquedos</option>
+      
+    </select>
+  </div>
+  <h5>Prioridade:</h5>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Baixo" name="nivel">
+  <label class="form-check-label" for="inlineRadio1">Baixo</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Medio" name="nivel">
+  <label class="form-check-label" for="inlineRadio2">Médio</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Alto" name="nivel">
+  <label class="form-check-label" for="inlineRadio2">Alto</label>
+</div>
+<br>
+<br>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Descrição:</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descricao"></textarea>
+  </div>
+  <button type="button" class="btn btn-primary">Enviar</button>
+</form>
