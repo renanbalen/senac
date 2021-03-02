@@ -187,9 +187,9 @@ app.post('/cadastro', upload.single('imagem_prod'),function(req,res){
 app.post('/cadDoacao',function(req,res){
      
        cadastroDoacao.create({
-            categoria:req.body.categoria,
-            prioridade:req.body.prioridade,
-            descricao:req.body.descricao
+            categoria: req.body.categoria,
+            prioridade: req.body.prioridade,
+            descricao: req.body.descricao
             
        }).then(function(){
              cadastroDoacao.findAll().then(function(doacoes){
@@ -198,13 +198,11 @@ app.post('/cadDoacao',function(req,res){
        }).catch(function(erro){
             res.send("Erro"+erro)
        })
-  })
+  }) 
 
-  app.get('/cadDoacao',function(req,res){
+app.get('/cadDoacao',function(req,res){
      res.render('cadastroDoacao');
-    
 })
-  
 /*A partir daqui começam as rotas do express*/
 
 //este bloco e disparado pela url do navegador e buscar o formulario.handlebars
@@ -253,6 +251,8 @@ app.post('/updateUsuario',function(req,res){
 })
 
 })
+
+
 
 
 
