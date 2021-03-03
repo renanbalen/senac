@@ -27,7 +27,7 @@ const upload = multer({storage})
      secure: false, //true for 465, false for other ports
      auth: {
           user: "renan.balen@gmail.com",
-          pass: "dellACERappleSONY1020"
+          pass: ""
       },
       tls: {rejectUnauthorized: false}
 });*/
@@ -158,9 +158,13 @@ app.post('/login',function (req,res){
  })
  */
 req.session.email = req.body.email;
-usuario.count({where: { email: req.session.email }}).then(function(dados){
+req.session.senha = req.body.senha;
+
+usuario.count({where: [{ email: req.session.email},{senha:req.session.senha}]}).then(function(dados){
   if(dados >= 1){
-     res.render('paginainicial')
+       usuario.findAll({where: { email:req.session.email} && {senha:req.session.senha}}).then(function(doadores){
+      })
+     res.render('paginainicial',{doador: doadores.map(pagamento => pagamento.toJSON())})
   }else{
        res.send("usuario nao cadastrado" + dados)
   }
