@@ -51,16 +51,6 @@ const upload = multer({storage})
 
 
 
-
-
-
-
-
-
-
-
-
-
 var session = require('express-session');
 const cadastroDoacao = require("./models/doacao")
  app.use(session({
@@ -174,11 +164,15 @@ usuario.count({where: [{ email: req.session.email},{senha:req.session.senha}]}).
 //esse blobo é disparado pelo enviar do fourmulario
 
 app.post('/cadastro', upload.single('imagem_prod'),function(req,res){
-   console.log(req.file.originalname);
+     if(req.file){
+          var imagem = req.file.originalname
+        }else{
+             var imagem = 'semimagem.png'
+          }
      usuario.create({
           email:req.body.email,
           senha:req.body.senha,
-          foto:req.file.originalname
+          foto:imagem
      }).then(function(){
            usuario.findAll().then(function(doadores){
            res.render('cadastro',{doador: doadores.map(pagamento => pagamento.toJSON())})

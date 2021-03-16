@@ -9,7 +9,7 @@ const Sequelize = require("sequelize")
 
 //Instancia o sequelize, passando um argumento, as credenciais do banco 
 
-const sequelize = new Sequelize('projetopi','root','',{
+const sequelize = new Sequelize('projetopibalen','renanbalen','balen1313',{
     host:'localhost',
     dialect:'mysql'
 })
